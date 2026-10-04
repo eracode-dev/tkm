@@ -1,0 +1,17 @@
+name: TKM
+version: ${project.version}
+main: com.tkm.TKMPlugin
+api-version: 1.13
+softdepend: [Vault]
+author: TKM
+description: CoinFlip tarzı Taş Kağıt Makas oyunu.
+commands:
+  tkm:
+    description: Taş Kağıt Makas oyunu
+    usage: /tkm [kur|katil|iptal|liste|yardim]
+    aliases: [taskagitmakas, rps, taskagıtmakas]
+permissions:
+  tkm.use:
+    default: true
+  tkm.admin:
+    default: op
