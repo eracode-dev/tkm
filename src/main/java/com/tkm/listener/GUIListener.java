@@ -35,14 +35,7 @@ public class GUIListener implements Listener {
 
         String mainTitle = MainMenu.title(plugin);
         String gamesTitle = GamesMenu.title(plugin);
-        String opened;
-        // 1.8 dahil tüm sürümlerde derlenebilmesi için getInventory().getTitle() kullanıldı
-        // (yeni sürümlerde deprecated ama hala çalışıyor)
-        try {
-            opened = e.getInventory().getTitle();
-        } catch (Exception ex) {
-            return;
-        }
+        String opened = e.getView().getTitle();
 
         boolean isMain = opened != null && opened.equals(mainTitle);
         boolean isGames = opened != null && opened.equals(gamesTitle);
